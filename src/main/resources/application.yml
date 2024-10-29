@@ -1,0 +1,16 @@
+spring:
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: update
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+  datasource:
+    url: jdbc:sqlite:drive_db.db
+    driver-class-name: org.sqlite.JDBC
+    username: root
+    password: 1234
+
+server:
+  servlet:
+    context-path: /api
