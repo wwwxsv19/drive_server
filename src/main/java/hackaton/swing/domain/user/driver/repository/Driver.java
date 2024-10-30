@@ -24,7 +24,7 @@ public class Driver {
     private String driverPassword;
 
     @JdbcTypeCode(SqlTypes.JSON)
-    private Map<String, String> driverKeywords;
+    private Map<Integer, String> driverKeywords;
 
     private String driverCarNumber;
 }

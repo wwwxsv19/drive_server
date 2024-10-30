@@ -24,5 +24,5 @@ public class Passenger {
     private String passengerPassword;
 
     @JdbcTypeCode(SqlTypes.JSON)
-    private Map<String, String> passengerKeywords;
+    private Map<Integer, String> passengerKeywords;
 }

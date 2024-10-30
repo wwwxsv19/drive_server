@@ -6,6 +6,7 @@ import hackaton.swing.domain.user.driver.repository.Driver;
 import hackaton.swing.domain.user.driver.repository.repository.DriverRepository;
 import hackaton.swing.domain.user.passenger.Passenger;
 import hackaton.swing.domain.user.passenger.repository.PassengerRepository;
+import hackaton.swing.domain.user.types.Keywords;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -31,9 +32,9 @@ public class AuthController {
             return ResponseEntity.ok().body("이미 DB 정보가 존재함!");
         }
 
-        Map<String, String> keywords = new HashMap<>();
-        keywords.put("테스트", "테스트");
-        keywords.put("비흡연", "비흡연");
+        Map<Integer, String> keywords = new HashMap<>();
+        keywords.put(Keywords.N1.getKey(), Keywords.N1.getValue()); // 안전 운전
+        keywords.put(Keywords.N4.getKey(), Keywords.N4.getValue()); // 비흡연
 
         passengerRepository.save(
                 Passenger.builder()

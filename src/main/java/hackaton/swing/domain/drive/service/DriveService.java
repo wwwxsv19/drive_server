@@ -2,6 +2,7 @@ package hackaton.swing.domain.drive.service;
 
 import hackaton.swing.domain.drive.DriveHis;
 import hackaton.swing.domain.drive.repository.DriveHisRepository;
+import hackaton.swing.domain.user.passenger.Passenger;
 import hackaton.swing.domain.user.presentation.dto.GetDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

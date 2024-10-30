@@ -22,4 +22,10 @@ public class GetDto {
         private String driveDate;
         private List<History> historyData;
     }
+
+    @Builder
+    @Getter
+    public static class KeywordsResponse {
+        private List<Integer> keywords;
+    }
 }
