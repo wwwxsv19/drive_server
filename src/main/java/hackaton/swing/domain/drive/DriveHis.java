@@ -1,16 +1,13 @@
 package hackaton.swing.domain.drive;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Builder
 @Entity
-@Table(name = "serviceName_drive_his")
+@Table(name = "drive_his")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -19,11 +16,16 @@ public class DriveHis {
     @GeneratedValue
     private int driverHisId;
 
-    private LocalDateTime createdTime = LocalDateTime.now();
+    @Column(columnDefinition = "date")
+    private String createdTime;
 
     private String passengerId;
 
     private String driverId;
 
+    private String driverCarNumber;
+
     private int driveCost;
+
+    private int driveDistance;
 }

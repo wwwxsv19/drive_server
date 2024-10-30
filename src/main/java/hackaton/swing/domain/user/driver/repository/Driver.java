@@ -1,4 +1,4 @@
-package hackaton.swing.domain.user;
+package hackaton.swing.domain.user.driver.repository;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -11,18 +11,20 @@ import java.util.Map;
 
 @Builder
 @Entity
-@Table(name = "serviceName_passenger")
+@Table(name = "driver")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class User {
+public class Driver {
     @Id
-    private String passengerId;
+    private String driverId;
 
-    private String passengerName;
+    private String driverName;
 
-    private String passengerPassword;
+    private String driverPassword;
 
     @JdbcTypeCode(SqlTypes.JSON)
-    private Map<String, String> passengerKeywords;
+    private Map<String, String> driverKeywords;
+
+    private String driverCarNumber;
 }
